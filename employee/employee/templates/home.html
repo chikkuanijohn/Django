@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="name" id="" placeholder="name">
+        <input type="text" name="age" id="" placeholder="age">
+        <input type="text" name="position" id="" placeholder="position">
+        <input type="submit" value="Add">
+    </form>
+    <table>
+        <tr>
+            <th>Name</th>
+           <th>Age</th> 
+           <th>position</th>
+        </tr>
+        {% for i in employee %}
+    
+    <tr>
+        <th>{{i.name}}</th>
+        <th>{{i.age}}</th>
+        <th>{{i.position}}</th>
+       
+    </tr>
+    {% endfor %}
+
+    </table>
+   
+</body>
+</html>
