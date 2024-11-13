@@ -27,8 +27,11 @@
         <th>{{i.roll_no}}</th>
         <th>{{i.name}}</th>
         <th>{{i.age}}</th>
-        <a href="edit/{{i.roll_no}}">Edit</a>
-        <a href="">Delete</a>
+        <th>
+            <a href="edit/{{i.pk}}">Edit</a>
+            <a href="delete/{{i.pk}}">Delete</a>
+        </th>
+      
     </tr>
     {% endfor %}
 
